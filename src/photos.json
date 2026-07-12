@@ -1,37 +1,182 @@
 [
-  {
-    "file": "IMG_6897.jpeg",
-    "latitude": -36.84679166666667,
-    "longitude": 174.76428333333334
-  },
-  {
-    "file": "IMG_6919.jpeg",
-    "latitude": -37.85769166666667,
-    "longitude": 175.68171666666666
-  },
-  {
-    "file": "IMG_7010.jpeg",
-    "latitude": -37.83044166666667,
-    "longitude": 144.97345
-  },
-  {
-    "file": "IMG_7051.jpeg",
-    "latitude": -33.876555555555555,
-    "longitude": 151.21073888888887
-  },
-  {
-    "file": "IMG_7100.jpeg",
-    "latitude": -33.85741388888889,
-    "longitude": 151.21551388888886
-  },
-  {
-    "file": "IMG_7162.jpeg",
-    "latitude": -33.873980555555555,
-    "longitude": 151.19049166666667
-  },
-  {
-    "file": "IMG_7175.jpeg",
-    "latitude": -33.73273888888889,
-    "longitude": 150.3125916666667
-  }
+    {
+        "file": "IMG_1701.jpeg",
+        "latitude": 1.2823527777777777,
+        "longitude": 103.86381666666666
+    },
+    {
+        "file": "IMG_1855.jpeg",
+        "latitude": 37.78780277777778,
+        "longitude": -122.50515
+    },
+    {
+        "file": "IMG_2444.jpeg",
+        "latitude": 21.885011111111112,
+        "longitude": -159.49359166666665
+    },
+    {
+        "file": "IMG_2548.jpeg",
+        "latitude": -8.575766666666667,
+        "longitude": 115.28968888888889
+    },
+    {
+        "file": "IMG_2662.jpeg",
+        "latitude": -8.275386111111112,
+        "longitude": 115.16649722222223
+    },
+    {
+        "file": "IMG_3198.jpeg",
+        "latitude": 25.02690833333333,
+        "longitude": 121.57440833333332
+    },
+    {
+        "file": "IMG_3266.jpeg",
+        "latitude": 36.25346666666667,
+        "longitude": 137.66413888888889
+    },
+    {
+        "file": "IMG_3335.jpeg",
+        "latitude": 35.50893055555556,
+        "longitude": 138.76927222222224
+    },
+    {
+        "file": "IMG_3338.jpeg",
+        "latitude": 64.76551111111111,
+        "longitude": -23.621969444444446
+    },
+    {
+        "file": "IMG_3431.jpeg",
+        "latitude": 1.2843972222222222,
+        "longitude": 103.86103888888888
+    },
+    {
+        "file": "IMG_3543.jpeg",
+        "latitude": 63.98498611111111,
+        "longitude": -16.959594444444445
+    },
+    {
+        "file": "IMG_3639.jpeg",
+        "latitude": 63.61573888888889,
+        "longitude": -19.990033333333333
+    },
+    {
+        "file": "IMG_3689.jpeg",
+        "latitude": 64.31229444444445,
+        "longitude": -20.301080555555558
+    },
+    {
+        "file": "IMG_3733.jpeg",
+        "latitude": 64.03987222222221,
+        "longitude": -20.885169444444443
+    },
+    {
+        "file": "IMG_3817.jpeg",
+        "latitude": 48.860255555555554,
+        "longitude": 2.3263999999999996
+    },
+    {
+        "file": "IMG_3855.jpeg",
+        "latitude": 48.85713611111111,
+        "longitude": 2.2888333333333333
+    },
+    {
+        "file": "IMG_3872.jpeg",
+        "latitude": 48.86158888888889,
+        "longitude": 2.335430555555556
+    },
+    {
+        "file": "IMG_3886.jpeg",
+        "latitude": 52.378436111111114,
+        "longitude": 4.901822222222223
+    },
+    {
+        "file": "IMG_3922.jpeg",
+        "latitude": 50.89618333333333,
+        "longitude": 4.340161111111111
+    },
+    {
+        "file": "IMG_3961.jpeg",
+        "latitude": 51.501158333333336,
+        "longitude": -0.1259861111111111
+    },
+    {
+        "file": "IMG_4021.jpeg",
+        "latitude": 51.502361111111114,
+        "longitude": -0.12348888888888888
+    },
+    {
+        "file": "IMG_4097.jpeg",
+        "latitude": 37.20030555555556,
+        "longitude": -112.987075
+    },
+    {
+        "file": "IMG_4111.jpeg",
+        "latitude": 37.80177222222222,
+        "longitude": -122.40453333333333
+    },
+    {
+        "file": "IMG_4209.jpeg",
+        "latitude": 37.51641111111111,
+        "longitude": -112.26476944444444
+    },
+    {
+        "file": "IMG_4290.jpeg",
+        "latitude": 42.45281111111112,
+        "longitude": -76.49263055555555
+    },
+    {
+        "file": "IMG_4313.jpeg",
+        "latitude": 36.101330555555556,
+        "longitude": -115.17329444444445
+    },
+    {
+        "file": "IMG_6232.jpeg",
+        "latitude": 42.367622222222224,
+        "longitude": -71.12225277777777
+    },
+    {
+        "file": "IMG_6235.jpeg",
+        "latitude": 42.361355555555555,
+        "longitude": -71.05712777777778
+    },
+    {
+        "file": "IMG_6359.jpeg",
+        "latitude": 43.70468888888889,
+        "longitude": -72.28859722222222
+    },
+    {
+        "file": "IMG_6897.jpeg",
+        "latitude": -36.84679166666667,
+        "longitude": 174.76428333333334
+    },
+    {
+        "file": "IMG_6919.jpeg",
+        "latitude": -37.85769166666667,
+        "longitude": 175.68171666666666
+    },
+    {
+        "file": "IMG_7010.jpeg",
+        "latitude": -37.83044166666667,
+        "longitude": 144.97345
+    },
+    {
+        "file": "IMG_7051.jpeg",
+        "latitude": -33.876555555555555,
+        "longitude": 151.21073888888887
+    },
+    {
+        "file": "IMG_7100.jpeg",
+        "latitude": -33.85741388888889,
+        "longitude": 151.21551388888886
+    },
+    {
+        "file": "IMG_7162.jpeg",
+        "latitude": -33.873980555555555,
+        "longitude": 151.19049166666667
+    },
+    {
+        "file": "IMG_7175.jpeg",
+        "latitude": -33.73273888888889,
+        "longitude": 150.3125916666667
+    }
 ]

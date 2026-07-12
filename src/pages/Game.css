@@ -1,0 +1,162 @@
+.game {
+    width: min(1600px, 96vw);
+    margin: 2rem auto;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1rem 2rem;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 18px;
+
+    backdrop-filter: blur(12px);
+}
+
+.header-stat {
+    text-align: center;
+}
+
+.header-stat span {
+    color: #888;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+.header-stat h2 {
+    color: black;
+    margin-top: 0.2rem;
+}
+
+.header-logo {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.game-content {
+    display: flex;
+    gap: 2rem;
+
+    height: 72vh;
+}
+
+.photo-panel,
+.map-panel {
+    flex: 1;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    border-radius: 20px;
+
+    padding: 1rem;
+
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
+.photo-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo-panel img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    border-radius: 14px;
+}
+
+.map-panel {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 1rem;
+}
+
+.game-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.score-card {
+    background: rgba(255, 255, 255, 0.07);
+
+    border-radius: 16px;
+
+    padding: 1rem;
+
+    text-align: center;
+}
+
+.guess-button,
+.next-round-button {
+    width: 100%;
+
+    max-width: 420px;
+
+    height: 64px;
+
+    border: none;
+
+    border-radius: 18px;
+
+    background: linear-gradient(180deg, #24d66d, #00b35b);
+
+    color: white;
+
+    font-size: 1.3rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+
+    transition: 0.15s;
+
+    box-shadow: 0 10px 30px rgba(0, 200, 83, 0.35);
+}
+
+.guess-button:hover,
+.next-round-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 16px 35px rgba(0, 200, 83, 0.45);
+}
+
+.guess-button:active,
+.next-round-button:active {
+    transform: translateY(0);
+}
+
+.end-screen {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 2rem;
+}
+
+.end-screen h1 {
+    font-size: 4rem;
+}
+
+.end-screen h2 {
+    font-size: 2rem;
+}
