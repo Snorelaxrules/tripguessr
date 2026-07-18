@@ -37,7 +37,7 @@ export default function Game() {
 
     const [totalScore, setTotalScore] = useState(0);
 
-    const [roundOver, setRoundOver] = useState(false);
+    const [roundOver, setRoundOver] = useState(true);
 
     const gameOver = roundOver && photoIndex === gamePhotos.length - 1;
 
@@ -103,34 +103,41 @@ export default function Game() {
             />
 
             <div className="game-content">
-                <PhotoPanel file={currentPhoto.file} />
+                <section className="photo-panel">
+                    <PhotoPanel file={currentPhoto.file} />
+                </section>
 
-                <div className="map-panel">
-                    <Map
-                        selectedGuess={guess}
-                        onSelectGuess={setGuess}
-                        targetLocation={
-                            roundOver
-                                ? {
-                                      lat: currentPhoto.latitude,
-                                      lng: currentPhoto.longitude,
-                                  }
-                                : null
-                        }
-                    />
+                <aside className="sidebar">
+                    <div className="map-card">
+                        <div className="panel-header">
+                            <h3>📍 Place your guess</h3>
+                            <p>Click anywhere on the map.</p>
+                        </div>
+
+                        <Map
+                            selectedGuess={guess}
+                            onSelectGuess={setGuess}
+                            targetLocation={
+                                roundOver
+                                    ? {
+                                          lat: currentPhoto.latitude,
+                                          lng: currentPhoto.longitude,
+                                      }
+                                    : null
+                            }
+                        />
+                    </div>
 
                     {score !== null && distance !== null && (
                         <ScoreCard score={score} distance={distance} />
                     )}
-                </div>
-            </div>
 
-            <div className="game-footer">
-                {!roundOver ? (
-                    <GuessButton disabled={!guess} onClick={confirmGuess} />
-                ) : (
-                    <NextRoundButton onClick={nextRound} />
-                )}
+                    {!roundOver ? (
+                        <GuessButton disabled={!guess} onClick={confirmGuess} />
+                    ) : (
+                        <NextRoundButton onClick={nextRound} />
+                    )}
+                </aside>
             </div>
         </main>
     );

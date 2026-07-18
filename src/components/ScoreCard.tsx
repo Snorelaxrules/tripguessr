@@ -6,9 +6,9 @@ type Props = {
 export default function ScoreCard({ score, distance }: Props) {
     return (
         <div className="score-card">
-            <h1>{score.toLocaleString()}</h1>
+            <div className="score">{score.toLocaleString()}</div>
 
-            <p>{distance.toFixed(1)} km away</p>
+            <div className="distance">📍 {distance.toFixed(1)} km away</div>
         </div>
     );
 }
