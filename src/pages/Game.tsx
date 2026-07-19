@@ -37,9 +37,9 @@ export default function Game() {
 
     const [totalScore, setTotalScore] = useState(0);
 
-    const [roundOver, setRoundOver] = useState(true);
+    const [roundOver, setRoundOver] = useState(false);
 
-    const gameOver = roundOver && photoIndex === gamePhotos.length - 1;
+    const [gameFinished, setGameFinished] = useState(false);
 
     function confirmGuess() {
         if (!guess) return;
@@ -63,14 +63,15 @@ export default function Game() {
     }
 
     function nextRound() {
+        if (photoIndex === gamePhotos.length - 1) {
+            setGameFinished(true);
+            return;
+        }
+
         setPhotoIndex((i) => i + 1);
-
         setGuess(null);
-
         setDistance(null);
-
         setScore(null);
-
         setRoundOver(false);
     }
 
@@ -88,9 +89,11 @@ export default function Game() {
         setTotalScore(0);
 
         setRoundOver(false);
+
+        setGameFinished(false);
     }
 
-    if (gameOver) {
+    if (gameFinished) {
         return <EndScreen totalScore={totalScore} onRestart={restartGame} />;
     }
 
@@ -125,6 +128,7 @@ export default function Game() {
                                       }
                                     : null
                             }
+                            roundOver={roundOver}
                         />
                     </div>
 
@@ -134,8 +138,13 @@ export default function Game() {
 
                     {!roundOver ? (
                         <GuessButton disabled={!guess} onClick={confirmGuess} />
+                    ) : photoIndex === gamePhotos.length - 1 ? (
+                        <NextRoundButton text="Finish" onClick={nextRound} />
                     ) : (
-                        <NextRoundButton onClick={nextRound} />
+                        <NextRoundButton
+                            text="Next Round"
+                            onClick={nextRound}
+                        />
                     )}
                 </aside>
             </div>

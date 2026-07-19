@@ -1,7 +1,13 @@
-import { MapContainer, Marker, TileLayer, useMapEvents } from "react-leaflet";
+import {
+    MapContainer,
+    Marker,
+    TileLayer,
+    useMap,
+    useMapEvents,
+} from "react-leaflet";
 
 import "leaflet/dist/leaflet.css";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import TargetMarker from "./TargetMarker";
 import GuessLine from "./GuessLine";
 
@@ -11,7 +17,8 @@ type MapProps = {
     interactive?: boolean;
     onSelectGuess?: (guess: Guess) => void;
     selectedGuess?: Guess | null;
-    targetLocation?: Guess | null;
+    targetLocation: Guess | null;
+    roundOver: boolean;
 };
 
 function ClickHandler({
@@ -30,11 +37,46 @@ function ClickHandler({
     return null;
 }
 
+function MapViewController({
+    guess,
+    target,
+    roundOver,
+}: {
+    guess: Guess | null;
+    target: Guess | null;
+    roundOver: boolean;
+}) {
+    const map = useMap();
+
+    useEffect(() => {
+        // Round in progress → default view
+        if (guess == null) {
+            map.setView([20, -20], 1.5, { animate: true });
+        }
+        // Round over → show both pins
+        if (roundOver && guess && target) {
+            map.fitBounds(
+                [
+                    [guess.lat, guess.lng],
+                    [target.lat, target.lng],
+                ],
+                {
+                    padding: [60, 60],
+                    animate: true,
+                },
+            );
+        }
+    }, [guess, target, map]);
+
+    return null;
+}
+
 export default function Map({
     interactive = true,
     onSelectGuess,
     selectedGuess,
     targetLocation,
+    roundOver,
 }: MapProps) {
     const [localGuess, setLocalGuess] = useState<Guess | null>(null);
     const guess = selectedGuess ?? localGuess;
@@ -62,9 +104,16 @@ export default function Map({
                 />
 
                 <ClickHandler
-                    enabled={interactive}
+                    enabled={interactive && !roundOver}
                     onClick={resolvedOnSelect}
                 />
+
+                <MapViewController
+                    guess={guess}
+                    target={targetLocation}
+                    roundOver={roundOver}
+                />
+
                 {guess && <Marker position={[guess.lat, guess.lng]} />}
                 <TargetMarker target={targetLocation} />
 

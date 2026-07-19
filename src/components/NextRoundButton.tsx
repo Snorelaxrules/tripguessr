@@ -1,11 +1,15 @@
-type NextRoundButtonProps = {
+type Props = {
     onClick: () => void;
+    text?: string;
 };
 
-export default function NextRoundButton({ onClick }: NextRoundButtonProps) {
+export default function NextRoundButton({
+    onClick,
+    text = "Next Round",
+}: Props) {
     return (
         <button className="next-round-button" onClick={onClick}>
-            Next Round →
+            {text}
         </button>
     );
 }
